@@ -13,37 +13,40 @@
             <div class="container bg-white">
                 <div class="nav-bar__wrap d-flex justify-content-between">
                     <div class="logo">
-                        <a href="" class="logo-link">Supplement</a>
+                        <a href="" class="logo__link">Supplement</a>
                     </div>
-                    <a href="" class="nav-btn"><span class="nav-btn__line"></span></a>
+                    <a href="#" class="nav-btn"><span class="nav-btn__line"></span></a>
                 </div>
                 <hr class="nav-bar__border">
-                <nav class="nav-menu">
-                    <div class="nav-menu__wrap d-flex flex-column align-items-stretch text-center">
-                        <a href="/" class="nav-menu__link">Home</a>
-                        <a href="#fetures" class="nav-menu__link">Fetures</a>
-                        <a href="#results" class="nav-menu__link">Real results</a>
-                        <a href="#testimonials" class="nav-menu__link">Testominals</a>
-                        <a href="#ingridients" class="nav-menu__link">Ingredients</a>
-                        <a href="#sertifications" class="nav-menu__link">Certifications</a>
-                        <a href="/" class="nav-menu__link">Contacts</a>
+                <nav id="nav" class="nav-bar__menu">
+                    <div class="nav-bar__block d-flex flex-column align-items-stretch text-center">
+                        <a href="/" class="nav-bar__link">Home</a>
+                        <a href="#fetures" class="nav-bar__link">Fetures</a>
+                        <a href="#results" class="nav-bar__link">Real results</a>
+                        <a href="#testimonials" class="nav-bar__link">Testominals</a>
+                        <a href="#ingridients" class="nav-bar__link">Ingredients</a>
+                        <a href="#sertifications" class="nav-bar__link">Certifications</a>
+                        <a href="/" class="nav-bar__link">Contacts</a>
                     </div>
                 </nav>
             </div>
         </div>
+
         <div class="header__content">
             <div class="container">
-                <div class="header-wrap d-flex flex-wrap justify-content-center justify-content-md-between align-items-md-center">
+                <div class="header__wrap d-flex flex-wrap justify-content-center justify-content-md-between align-items-md-center">
                     <div class="header__block text-center text-md-left">
-                        <h1 class="header-title">Do It Now</h1>
-                        <p class="header-subtitle">Or You Never Get It Back</p>
-                        <p class="header-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.<br> Fugiat, facilis?</p>
-                        <div class="wrap d-flex flex-column flex-sm-row ">
-                            <a href="#order" class="blue-button align-self-center">order now</a>
-                            <a id="playYoutube1" href="#" class="watch mt-5 mt-sm-0 align-self-center">whatch the video</a>
+                        <h1 class="header__title">Do It Now</h1>
+                        <p class="header__subtitle">Or You Never Get It Back</p>
+                        <p class="header__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.<br> Fugiat, facilis?</p>
+                        <div class="header__section d-flex flex-column flex-sm-row ">
+                            <div id="buy">
+                                <a href="#order" class="blue-button align-self-center">order now</a>
+                            </div>
+                            <a id="playYoutube1" href="#" class="header__watch mt-5 mt-sm-0 align-self-center">whatch the video</a>
                         </div>
                     </div>
-                    <div class="img-header align-self-stretch"></div>
+                    <div class="header__img align-self-stretch"></div>
                 </div>
             </div>
         </div>
@@ -419,90 +422,10 @@
         </div>
     </div>
 
-    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-    <script>
-        $(function() {
-        /*слайдер1*/
-        $('.slider-wrap').slick({
-           /* vertical: true,*/
-            dots: true,
-            dotsClass: 'dots',
-            prevArrow: $('.prev'),
-            nextArrow: $('.next'),
-            });
-        /*слайдер2*/
-        $('.slider-wrap2').slick({
-           /* vertical: true,*/
-            dots: true,
-            dotsClass: 'dots',
-            prevArrow: $('.prev2'),
-            nextArrow: $('.next2'),
-            });
-        /*меню-карточек*/
-        $('#1').hover(function() {
-        $('#2').toggleClass('visible');
-            })
-        $('#3').hover(function() {
-        $('#4').toggleClass('visible');
-            })
-        $('#5').hover(function() {
-        $('#6').toggleClass('visible');
-            })
-         $('#7').hover(function() {
-        $('#8').toggleClass('visible');
-            })
-        $('#9').hover(function() {
-        $('#10').toggleClass('visible');
-            })
-        $('#11').hover(function() {
-        $('#12').toggleClass('visible');
-            })
-        $('#13').hover(function() {
-        $('#14').toggleClass('visible');
-            })
-        $('#15').hover(function() {
-        $('#16').toggleClass('visible');
-            })
-        /*меню*/
-        $('.nav-btn').click(function() {
-        event.preventDefault();
-        $(this).toggleClass('active');
-        $('.nav-menu__wrap').toggleClass('nav-menu__active');
-            })
-        $('.nav-menu__link').click(function() {
-        $('.nav-btn').toggleClass('active');
-        $('.nav-menu__wrap').toggleClass('nav-menu__active');
-            })
-        /*плавная прокрутка*/
-        $("#header").on("click","a", function (event) {
-        event.preventDefault();
-        var id = $(this).attr('href'),
-        top = $(id).offset().top;
-        $('body,html').animate({scrollTop: top}, 800);
-            });
-        ///////модальное окно//////
-        $('.watch').click(function() {
-        $('.modal').fadeIn('500', function() {
-            });
-        $('body').toggleClass('modal-show');
-            })
-        $('.modal__close').click(function() {
-        $('.modal').fadeOut('500', function() {
-            });
-        $('body').toggleClass('modal-show');
-            })
-        });
-    </script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="js/main.min.js"></script>
     <script src="//www.youtube.com/player_api"></script>
-    <script>
-        var play;
-        function onYouTubePlayerAPIReady() {
-            play = new YT.Player('play', {videoId: '-5grgGw1yyU',});
-            document.getElementById('playYoutube1').onclick = function() {play.playVideo();};
-            document.getElementById('pauseYoutube1').onclick = function() {play.pauseVideo();};
-        }
-    </script>
 </body>
 </html>
